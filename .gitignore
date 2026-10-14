@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Production builds
+dist/
+**/dist/
+build/
+**/build/
+
+# Environment variables
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor & OS files
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.user
+
+# Temporary / Cache files
+.cache/
+.vite/
+
+# Security: Prevent VS Code automatic tasks or settings from being committed
+.vscode/

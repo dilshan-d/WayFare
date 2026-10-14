@@ -1,0 +1,77 @@
+{
+  "info": {
+    "name": "Wayfare API Suite",
+    "description": "Complete REST API endpoints collection for Wayfare Travel & Booking System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Demo\",\n  \"lastName\": \"User\",\n  \"email\": \"demo@wayfare.com\",\n  \"password\": \"User@123456\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/auth/register", "host": ["{{baseUrl}}"], "path": ["auth", "register"] }
+          }
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@wayfare.com\",\n  \"password\": \"Admin@123456\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/auth/login", "host": ["{{baseUrl}}"], "path": ["auth", "login"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Destinations",
+      "item": [
+        {
+          "name": "Get Destinations",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/destinations", "host": ["{{baseUrl}}"], "path": ["destinations"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tours",
+      "item": [
+        {
+          "name": "Get Tours",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/tours", "host": ["{{baseUrl}}"], "path": ["tours"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Hotels",
+      "item": [
+        {
+          "name": "Get Hotels",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/hotels", "host": ["{{baseUrl}}"], "path": ["hotels"] }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000/api" }
+  ]
+}
